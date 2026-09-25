@@ -22,6 +22,15 @@
       "tintColor": "#00AEEF",
       "versions": [
         {
+          "version": "2.1.5",
+          "date": "2026-09-25",
+          "localizedDescription": "支持自定义主题颜色 #3009\r\n综合搜索用户过滤黑名单 #3043\r\n可复制文本工具栏默认添加站内搜索按钮 #2984\r\n支持保存 SC 为图片 co-by @My-Responsitories\r\n支持 Windows deeplink #2673 by @HChaZZY\r\n支持 Linux deeplink #2931 by @Tobiichi-Origuchi\r\n降低桌面端 PIP 大小限制 #2735 #2982 by @Aclguh\r\n桌面端支持保存全部图片 #2920 #2983 by @My-Responsitories\r\nLinux 支持内嵌 WebView #3014 #3016 by @Tobiichi-Origuchi co-by @My-Responsitories\r\n其他调整 #2962 #3025 #3027 by @My-Responsitories\r\n\r\n修复分 P 视频链接 #2963\r\n修复滑动快进/退震动失效 #2966\r\n修复小窗模式下画面被 SC 遮挡 #3005\r\n修复无痕模式出现直播入场提示 #2971\r\n修复多次点击截图保存退出视频页面 #3017\r\n修复更新媒体通知、后台连播 #2761 #2943\r\n修复 iOS 静音模式下偶发视频无声修复 #3039 @sounfury\r\n修复部分安卓无法登录 #2930 #3063 by @Tobiichi-Origuchi\r\n修复 macOS 切换全屏控件无法点击 #2917 #2976 by @milk2715093695",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.5/PiliPlus_ios_2.1.5%2B5410.ipa",
+          "size": 23999265,
+          "minOSVersion": "14.0",
+          "buildVersion": "5410"
+        },
+        {
           "version": "2.1.4",
           "date": "2026-09-13",
           "localizedDescription": "增加综合搜索\r\n收藏页支持切换页码为倒序\r\n重构定位视频加载前页视频逻辑\r\n支持分开查看动态`赞`与`转发`详情\r\n收藏夹`复制`/`移动`视频时保持顺序 #2850\r\n其他调整 #2889 by @My-Responsitories\r\n播放器优化 #2873 by @My-Responsitories\r\n支持点击动态/评论表情显示 Tooltip，默认关 #2918\r\n\r\n修复 #2892 #2899 #2909 #2949 #2950 #2956\r\n修复 #2882 by @Tobiichi-Origuchi",
@@ -281,20 +290,21 @@
           "size": 24968369,
           "minOSVersion": "14.0",
           "buildVersion": "4721"
-        },
-        {
-          "version": "2.0.0",
-          "date": "2026-03-03",
-          "localizedDescription": "听视频支持定时关闭\r\n听视频支持 Sponsor Block\r\nmacOS 响应 CMD+Q #1834 by @cnctem\r\nLinux 支持设置使用SSD #1839 by @just-a-pony\r\n添加播放顺序设置 #1830 by @My-Responsitories\r\n私信视频消息支持显示 UP 主赠言 #1849 by @barmxds6ch\r\n\r\n优化页面\r\n优化收起顶/底栏\r\n优化取消下拉刷新\r\n优化分享视频链接 #1835 co-by @gujial\r\n优化 #1829 #1831 #1832 #1840 #1846 #1854 by @My-Responsitories\r\n\r\n重构播放组件 #1848 by @My-Responsitories\r\n重构查看大图、长图 by @bggRGjQaUbCoE @My-Responsitories\r\n其他\r\n\r\n修复冷启动无法处理 URL Scheme \r\n修复校验 loudnorm 参数 #1838 by @Starfallan\r\n\r\nCI 调整 #1852 by @nlsdt \r\n其他",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.0/PiliPlus_ios_2.0.0%2B4715.ipa",
-          "size": 24968000,
-          "minOSVersion": "14.0",
-          "buildVersion": "4715"
         }
       ]
     }
   ],
   "news": [
+    {
+      "title": "PiliPlus 2.1.5",
+      "identifier": "release-2.1.5",
+      "caption": "2.1.5",
+      "date": "2026-09-25",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.5"
+    },
     {
       "title": "PiliPlus 2.1.4",
       "identifier": "release-2.1.4",
@@ -584,16 +594,6 @@
       "notify": true,
       "appID": "com.example.piliplus",
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.0.1"
-    },
-    {
-      "title": "PiliPlus 2.0.0",
-      "identifier": "release-2.0.0",
-      "caption": "2.0.0",
-      "date": "2026-03-03",
-      "tintColor": "#00AEEF",
-      "notify": true,
-      "appID": "com.example.piliplus",
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.0"
     }
   ]
 }
