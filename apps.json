@@ -22,6 +22,15 @@
       "tintColor": "#00AEEF",
       "versions": [
         {
+          "version": "2.1.6",
+          "date": "2026-10-05",
+          "localizedDescription": "支持离线合集归档\r\n支持离线/更新空降片段\r\n添加视频过滤作用域详情\r\n支持切换`番剧`/`剧集`季度\r\n支持横屏时在侧栏显示`番剧`列表\r\n直播聊天显示`主播`标识 #3156\r\n直播聊天只显示点亮的牌子 #3155\r\n用户未直播时在主页显示入口按钮 #3033\r\n从视频切到直播不影响视频倍速 #3112\r\n支持转发同时评论 #3135\r\n@ 用户时置顶被`回复`/`转发`用户 #3123\r\n视频控制栏控件溢出处理 #3085\r\n添加英文文档 #3131 by @maoawa\r\n桌面端画中画记忆窗口位置大小 #2997\r\n收藏夹已满且未收藏时禁用选中 #3113\r\niOS 支持系统 PIP #3160 by @AotianNeo\r\n黑名单屏蔽扩展本地屏蔽，增加过滤搜索、评论\r\n支持按 `Enter` 保存截图 #3101 by @403bug\r\n支持从媒体会话向前/后跳转音视频 #2964 co-by @silverwolf-lv9999\r\n\r\n修复弹幕速度 #3136\r\n修复收藏夹视频跳转 #3137\r\n修复下滑关闭侧栏主页 #3160\r\n修复触控板浏览图片 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/183#issuecomment-5976539299\r\n修复 Windows 26H2 任务栏不在底部时，退出全屏出现窗口偏移 #2901",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6/PiliPlus_ios_2.1.6%2B5453.ipa",
+          "size": 24083344,
+          "minOSVersion": "14.0",
+          "buildVersion": "5453"
+        },
+        {
           "version": "2.1.5",
           "date": "2026-09-25",
           "localizedDescription": "支持自定义主题颜色 #3009\r\n综合搜索用户过滤黑名单 #3043\r\n可复制文本工具栏默认添加站内搜索按钮 #2984\r\n支持保存 SC 为图片 co-by @My-Responsitories\r\n支持 Windows deeplink #2673 by @HChaZZY\r\n支持 Linux deeplink #2931 by @Tobiichi-Origuchi\r\n降低桌面端 PIP 大小限制 #2735 #2982 by @Aclguh\r\n桌面端支持保存全部图片 #2920 #2983 by @My-Responsitories\r\nLinux 支持内嵌 WebView #3014 #3016 by @Tobiichi-Origuchi co-by @My-Responsitories\r\n其他调整 #2962 #3025 #3027 by @My-Responsitories\r\n\r\n修复分 P 视频链接 #2963\r\n修复滑动快进/退震动失效 #2966\r\n修复小窗模式下画面被 SC 遮挡 #3005\r\n修复无痕模式出现直播入场提示 #2971\r\n修复多次点击截图保存退出视频页面 #3017\r\n修复更新媒体通知、后台连播 #2761 #2943\r\n修复 iOS 静音模式下偶发视频无声修复 #3039 @sounfury\r\n修复部分安卓无法登录 #2930 #3063 by @Tobiichi-Origuchi\r\n修复 macOS 切换全屏控件无法点击 #2917 #2976 by @milk2715093695",
@@ -281,20 +290,21 @@
           "size": 25000596,
           "minOSVersion": "14.0",
           "buildVersion": "4769"
-        },
-        {
-          "version": "2.0.0.1",
-          "date": "2026-03-04",
-          "localizedDescription": "修复部分动态富文本显示\r\n修复触摸板调节音量没有检查`滑动调节音量`属性\r\n修复 bug\r\n\r\n## 2.0.0\r\n听视频支持定时关闭\r\n听视频支持 Sponsor Block\r\nmacOS 响应 CMD+Q #1834 by @cnctem\r\nLinux 支持设置使用SSD #1839 by @just-a-pony\r\n添加播放顺序设置 #1830 by @My-Responsitories\r\n私信视频消息支持显示 UP 主赠言 #1849 by @barmxds6ch\r\n\r\n优化页面\r\n优化收起顶/底栏\r\n优化取消下拉刷新\r\n优化分享视频链接 #1835 co-by @gujial\r\n优化 #1829 #1831 #1832 #1840 #1846 #1854 by @My-Responsitories\r\n\r\n重构播放组件 #1848 by @My-Responsitories\r\n重构查看大图、长图 by @bggRGjQaUbCoE @My-Responsitories\r\n其他\r\n\r\n修复冷启动无法处理 URL Scheme \r\n修复校验 loudnorm 参数 #1838 by @Starfallan\r\n\r\nCI 调整 #1852 by @nlsdt \r\n其他",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.0.1/PiliPlus_ios_2.0.0%2B4721.ipa",
-          "size": 24968369,
-          "minOSVersion": "14.0",
-          "buildVersion": "4721"
         }
       ]
     }
   ],
   "news": [
+    {
+      "title": "PiliPlus 2.1.6",
+      "identifier": "release-2.1.6",
+      "caption": "2.1.6",
+      "date": "2026-10-05",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6"
+    },
     {
       "title": "PiliPlus 2.1.5",
       "identifier": "release-2.1.5",
@@ -584,16 +594,6 @@
       "notify": true,
       "appID": "com.example.piliplus",
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.1"
-    },
-    {
-      "title": "PiliPlus 2.0.0.1",
-      "identifier": "release-2.0.0.1",
-      "caption": "2.0.0.1",
-      "date": "2026-03-04",
-      "tintColor": "#00AEEF",
-      "notify": true,
-      "appID": "com.example.piliplus",
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.0.1"
     }
   ]
 }
