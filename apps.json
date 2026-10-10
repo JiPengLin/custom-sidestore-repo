@@ -20,7 +20,7 @@
       "tintColor": "#00AEEF",
       "versions": [
         {
-          "version": "2.1.6.1",
+          "version": "2.1.6",
           "buildVersion": "5471",
           "date": "2026-10-10",
           "localizedDescription": "专栏支持跳转至评论 #3213\r\n其他调整 #3208 by @My-Responsitories\r\n\r\n修复 bug\r\n修复搜索风控验证 #3106\r\n修复窗口大小变化时图片闪烁 #2685\r\n修复安卓视频暂停时画面裁切问题 #3034 by @Hdy08",
@@ -56,7 +56,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.1.3.1",
+          "version": "2.1.3",
           "buildVersion": "5315",
           "date": "2026-09-05",
           "localizedDescription": "限制直播聊天缓存条目\r\n音频播放页配置音量均衡 #2598 by @Eazed-Yu\r\n限制离线弹幕下载并发 #2800 by @KIDA-MNESIA\r\n关注分组支持切换排序方式 #2772 co-by @defghy\r\nLinux 支持 WebView #2843 by @Tobiichi-Origuchi\r\n支持显示定时关闭剩余时间 #2461 co-by @SXP-Simon\r\n更新直播弹幕屏蔽页面，实现直播弹幕屏蔽 #2821 by @Starfallan\r\niOS 设置 `ITSAppUsesNonExemptEncryption` 属性 #2789 by @maoawa\r\n评论输入框增加 LaTeX 公式转 Unicode 开关 #2792 by @milk2715093695\r\n修复部分视频画质切换问题 #2810 #2828 by @TomorrowX6 co-by @My-Responsitories\r\n\r\n优化字体自重 #2787 by @My-Responsitories\r\n优化/修复账号逻辑 #2794 #2797 by @KIDA-MNESIA #2817 by @My-Responsitories\r\n\r\n修复 #2709 #2816 #2836 #2837",
@@ -74,7 +74,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.1.2.3",
+          "version": "2.1.2",
           "buildVersion": "5281",
           "date": "2026-08-30",
           "localizedDescription": "修复 bug",
@@ -83,7 +83,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.1.2.2",
+          "version": "2.1.2",
           "buildVersion": "5277",
           "date": "2026-08-29",
           "localizedDescription": "回退 #2446\r\n显示视频分 P 序号 #2717\r\n弹幕应用 APP 字体 #2712\r\n支持导入字体 co-by @My-Responsitories\r\n其他调整 #2734 #2767 by @My-Responsitories\r\n\r\n修复 #2716 #2731\r\n修复部分安卓设备无法显示登录验证码 #2642 #2713 by @My-Responsitories",
@@ -92,7 +92,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.1.2.1",
+          "version": "2.1.2",
           "buildVersion": "5255",
           "date": "2026-08-26",
           "localizedDescription": "支持加载 `bcc` 格式字幕 #2705\r\n播放器启用自动重连 #2446 by @AlinJiang\r\n安卓支持允许三方 APP 访问私有存储，默认关\r\n支持复制设备信息 #2688 by @My-Responsitories\r\n调整部分设置选项界面 #2683 by @My-Responsitories\r\n\r\n修复 #2697 by @My-Responsitories\r\n修复 #2637 #2638 #2647 #2671 #2692",
@@ -110,7 +110,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.1.1.2",
+          "version": "2.1.1",
           "buildVersion": "5231",
           "date": "2026-08-22",
           "localizedDescription": "自定义定时关闭时长改为滑动选择 #2632\r\n\r\n修复 #2631 #2636\r\n修复 #1967 #2634 by @My-Responsitories\r\n修复复制 VideoTrack 信息 #2633 by @My-Responsitories",
@@ -119,7 +119,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.1.1.1",
+          "version": "2.1.1",
           "buildVersion": "5230",
           "date": "2026-08-22",
           "localizedDescription": "自定义定时关闭时长改为滑动选择 #2632\r\n\r\n修复 #2631 #2636\r\n修复 #1967 #2634 by @My-Responsitories\r\n修复复制 VideoTrack 信息 #2633 by @My-Responsitories",
@@ -146,7 +146,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.0.9.2",
+          "version": "2.0.9",
           "buildVersion": "5051",
           "date": "2026-06-13",
           "localizedDescription": "修复 bug\r\n其他调整 #2404 by @My-Responsitories",
@@ -155,7 +155,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.0.9.1",
+          "version": "2.0.9",
           "buildVersion": "5047",
           "date": "2026-06-12",
           "localizedDescription": "直播支持切换线路\r\n桌面端支持自定义最大音量 #2199\r\n移动端支持设置播放器音量 #2358\r\n优化视频字幕、截图 #2364 by @My-Responsitories\r\n音乐页面显示全部标签 #2363 by @My-Responsitories\r\n支持自定义播放缓存大小、缓存时长 #2370 by @My-Responsitories\r\n\r\n修复 #2342 #2350 #2351 #2386\r\n修复桌面端富文本输入 #2123 #2215 #2300\r\n修复安卓端验证码窗口显示 #2341 by @My-Responsitories",
@@ -173,7 +173,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.0.8.1",
+          "version": "2.0.8",
           "buildVersion": "5024",
           "date": "2026-06-06",
           "localizedDescription": "增加私信消息点击范围 #2292\r\n\r\n修复专栏解析\r\n修复 #2295 #2308\r\n修复界面缩放时无法显示滚动弹幕 #2305",
@@ -191,7 +191,7 @@
           "minOSVersion": "14.0"
         },
         {
-          "version": "2.0.7.2",
+          "version": "2.0.7",
           "buildVersion": "4956",
           "date": "2026-05-15",
           "localizedDescription": "修复 #2075 #2087\r\n其他调整 #2100 by @My-Responsitories\r\n定时发布动态不立即检查是否可见 #2059 by @uhiovk",
