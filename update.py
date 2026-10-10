@@ -3,9 +3,9 @@ import re
 import json
 import urllib.request
 
-# ==================== 仓库与通用配置 ====================
+# ==================== 配置区 ====================
 PILI_REPO = "bggRGjQaUbCoE/PiliPlus"
-ZHIHU_REPO = "huamurui/zhihu-minus-minus"
+ZHIHU_SOURCE_URL = "https://github.com/huamurui/zhihu-minus-minus/releases/latest/download/altstore-source.json"
 
 SOURCE_NAME = "JiPengLin 的精选加速源"
 SOURCE_IDENTIFIER = "com.jipenglin.custom.source"
@@ -13,7 +13,7 @@ SOURCE_IDENTIFIER = "com.jipenglin.custom.source"
 # 国内镜像下载代理前缀
 IPA_PROXY_PREFIX = "https://gh-proxy.com/"
 
-# ==================== PiliPlus 配置 ====================
+# PiliPlus 配置
 PILI_BUNDLE_ID = "com.example.piliplus"
 PILI_CDN = "https://cdn.jsdelivr.net/gh/bggRGjQaUbCoE/PiliPlus@main"
 PILI_ICON = f"{PILI_CDN}/assets/images/logo/logo.png"
@@ -22,11 +22,7 @@ PILI_SCREENSHOTS = [
     f"{PILI_CDN}/assets/screenshots/174shots_so.png",
     f"{PILI_CDN}/assets/screenshots/850shots_so.png"
 ]
-
-# ==================== 知乎-- 配置 ====================
-ZHIHU_BUNDLE_ID = "com.huamu013.ZhihuMinusMinus"
-ZHIHU_ICON = "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png"
-# =======================================================
+# ===============================================
 
 def extract_build_version(filename: str) -> str:
     match = re.search(r"\+(\d+)\.ipa$", filename, re.IGNORECASE)
@@ -35,17 +31,16 @@ def extract_build_version(filename: str) -> str:
 def parse_semver(ver_str: str) -> list[int]:
     return [int(x) for x in re.findall(r"\d+", ver_str)]
 
-def fetch_releases(repo_name: str) -> list[dict]:
-    url = f"https://api.github.com/repos/{repo_name}/releases?per_page=20"
-    headers = {"User-Agent": "AltStore-Source-Updater", "Accept": "application/vnd.github+json"}
-    token = os.environ.get("GITHUB_TOKEN")
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
+def http_get_json(url: str) -> dict | list:
+    headers = {"User-Agent": "AltStore-Updater", "Accept": "application/json"}
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
-def build_piliplus_app(releases: list[dict]):
+def build_piliplus_app():
+    url = f"https://api.github.com/repos/{PILI_REPO}/releases?per_page=20"
+    releases = http_get_json(url)
+    
     versions = []
     news = []
     for rel in releases:
@@ -93,71 +88,43 @@ def build_piliplus_app(releases: list[dict]):
         "versions": versions
     }, news
 
-def build_zhihu_app(releases: list[dict]):
-    versions = []
-    news = []
-    for rel in releases:
-        if rel.get("draft"): continue
-        version = (rel.get("tag_name") or "").lstrip("v")
-        if not version: continue
+def build_zhihu_app():
+    # 直接读取知乎官方现成的 altstore-source.json，避开 GitHub API 跨仓 403 权限问题
+    source_json = http_get_json(ZHIHU_SOURCE_URL)
+    zhihu_app = source_json["apps"][0]
 
-        ipa_asset = next((a for a in rel.get("assets", []) if a.get("name", "").lower().endswith(".ipa")), None)
-        if not ipa_asset: continue
+    # 替换图标为 jsDelivr 国内 CDN
+    zhihu_app["iconURL"] = "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png"
+    zhihu_app["subtitle"] = "轻量、无广告的第三方知乎客户端"
 
-        date_str = rel.get("published_at", "")[:10]
-        download_url = f"{IPA_PROXY_PREFIX}{ipa_asset['browser_download_url']}" if IPA_PROXY_PREFIX else ipa_asset['browser_download_url']
+    # 为所有版本的下载链接注入国内加速代理
+    for v in zhihu_app.get("versions", []):
+        raw_url = v.get("downloadURL", "")
+        if IPA_PROXY_PREFIX and not raw_url.startswith(IPA_PROXY_PREFIX):
+            v["downloadURL"] = f"{IPA_PROXY_PREFIX}{raw_url}"
 
-        versions.append({
-            "version": version,
-            "buildVersion": "1",
-            "date": date_str,
-            "localizedDescription": (rel.get("body") or "").strip() or "轻量、无广告的第三方知乎客户端",
-            "downloadURL": download_url,
-            "size": ipa_asset.get("size", 0),
-            "minOSVersion": "15.1"
-        })
-        news.append({
-            "title": f"知乎-- {version}",
-            "identifier": f"zhihu-{version}",
-            "caption": rel.get("name") or f"Version {version} 发布",
-            "date": date_str,
+    news = [
+        {
+            "title": f"知乎-- {v['version']}",
+            "identifier": f"zhihu-{v['version']}",
+            "caption": f"Version {v['version']} 发布",
+            "date": v.get("date", ""),
             "tintColor": "#0066FF",
             "notify": True,
-            "appID": ZHIHU_BUNDLE_ID,
-            "url": rel.get("html_url")
-        })
-
-    versions.sort(key=lambda v: parse_semver(v["version"]), reverse=True)
-    return {
-        "name": "知乎--",
-        "bundleIdentifier": ZHIHU_BUNDLE_ID,
-        "developerName": "huamurui",
-        "subtitle": "轻量、无广告的第三方知乎客户端",
-        "localizedDescription": "轻量、无广告的第三方知乎客户端，支持浏览、搜索、收藏和创作（国内镜像加速版）。",
-        "iconURL": ZHIHU_ICON,
-        "tintColor": "#0066FF",
-        "category": "social",
-        "versions": versions,
-        "appPermissions": {
-            "entitlements": [],
-            "privacy": {
-                "NSCameraUsageDescription": "Allow app to access your camera",
-                "NSFaceIDUsageDescription": "Allow app to access your Face ID biometric data.",
-                "NSMicrophoneUsageDescription": "Allow app to access your microphone",
-                "NSPhotoLibraryAddUsageDescription": "Allow app to save photos",
-                "NSPhotoLibraryUsageDescription": "允许知乎--访问你的照片，以便在评论和正文中上传图片。"
-            }
+            "appID": zhihu_app["bundleIdentifier"],
+            "url": "https://github.com/huamurui/zhihu-minus-minus/releases"
         }
-    }, news
+        for v in zhihu_app.get("versions", [])[:3]
+    ]
+
+    return zhihu_app, news
 
 def main():
     print("正在拉取 PiliPlus...")
-    pili_releases = fetch_releases(PILI_REPO)
-    pili_app, pili_news = build_piliplus_app(pili_releases)
+    pili_app, pili_news = build_piliplus_app()
 
     print("正在拉取 知乎--...")
-    zhihu_releases = fetch_releases(ZHIHU_REPO)
-    zhihu_app, zhihu_news = build_zhihu_app(zhihu_releases)
+    zhihu_app, zhihu_news = build_zhihu_app()
 
     # 1. 生成聚合源 apps.json (包含两款应用)
     combined_source = {
@@ -177,7 +144,7 @@ def main():
         "name": "知乎-- (国内镜像源)",
         "identifier": "com.huamu013.ZhihuMinusMinus.source",
         "subtitle": "轻量、无广告的第三方知乎客户端",
-        "iconURL": ZHIHU_ICON,
+        "iconURL": zhihu_app["iconURL"],
         "apps": [zhihu_app],
         "news": zhihu_news
     }
