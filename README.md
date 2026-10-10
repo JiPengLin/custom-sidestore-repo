@@ -1,6 +1,6 @@
 # iOS 精选应用 SideStore / AltStore 订阅源 (国内镜像加速版)
 
-[![Sync Sources](https://github.com/JiPengLin/piliplus-sidestore-source/actions/workflows/sync.yml/badge.svg)](https://github.com/JiPengLin/piliplus-sidestore-source/actions/workflows/sync.yml)
+[![Sync Sources](https://github.com/JiPengLin/custom-sidestore-repo/actions/workflows/sync.yml/badge.svg)](https://github.com/JiPengLin/custom-sidestore-repo/actions/workflows/sync.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Mirror](https://img.shields.io/badge/Mirror-China_Accelerated-green.svg)](#)
 
@@ -23,7 +23,7 @@
 
 在 iOS 设备上使用 Safari 浏览器点击下方按钮，直接唤起 SideStore 并添加源：
 
-[![Add to SideStore](https://img.shields.io/badge/Add_Source_to-SideStore-00AEEF?style=for-the-badge&logo=apple)](https://stikstore.app/altdirect/?url=https://JiPengLin.github.io/piliplus-sidestore-source/apps.json)
+[![Add to SideStore](https://img.shields.io/badge/Add_Source_to-SideStore-00AEEF?style=for-the-badge&logo=apple)](https://stikstore.app/altdirect/?url=https://JiPengLin.github.io/custom-sidestore-repo/apps.json)
 
 ---
 
@@ -33,13 +33,13 @@
 
 #### 1. 聚合源（推荐：PiliPlus + 知乎--）
 ```text
-https://JiPengLin.github.io/piliplus-sidestore-source/apps.json
+https://JiPengLin.github.io/custom-sidestore-repo/apps.json
 ```
-*(备用免翻墙直链：`https://gh-proxy.com/https://raw.githubusercontent.com/JiPengLin/piliplus-sidestore-source/main/apps.json`)*
+*(备用免翻墙直链：`https://gh-proxy.com/https://raw.githubusercontent.com/JiPengLin/custom-sidestore-repo/main/apps.json`)*
 
 #### 2. 知乎-- 独立源（仅知乎）
 ```text
-https://JiPengLin.github.io/piliplus-sidestore-source/zhihu.json
+https://JiPengLin.github.io/custom-sidestore-repo/zhihu.json
 ```
 
 ---
