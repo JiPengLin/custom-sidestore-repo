@@ -24,9 +24,17 @@ PILI_SCREENSHOTS = [
 ]
 # ===============================================
 
-def extract_build_version(filename: str) -> str:
-    match = re.search(r"\+(\d+)\.ipa$", filename, re.IGNORECASE)
-    return match.group(1) if match else "1"
+def extract_pili_version_and_build(filename: str, fallback_tag: str):
+    # 优先从 IPA 文件名提取真实版本与构建号（例如 PiliPlus_ios_2.1.6+5453.ipa -> 2.1.6 和 5453）
+    match = re.search(r"PiliPlus_ios_([^+]+)\+(\d+)\.ipa$", filename, re.IGNORECASE)
+    if match:
+        return match.group(1), match.group(2)
+    
+    # 兜底匹配
+    build_match = re.search(r"\+(\d+)\.ipa$", filename, re.IGNORECASE)
+    build_ver = build_match.group(1) if build_match else "1"
+    clean_tag = fallback_tag.lstrip("v")
+    return clean_tag, build_ver
 
 def parse_semver(ver_str: str) -> list[int]:
     return [int(x) for x in re.findall(r"\d+", ver_str)]
@@ -45,18 +53,21 @@ def build_piliplus_app():
     news = []
     for rel in releases:
         if rel.get("draft"): continue
-        version = (rel.get("tag_name") or "").lstrip("v")
-        if not version: continue
+        tag = rel.get("tag_name") or ""
+        if not tag: continue
 
         ipa_asset = next((a for a in rel.get("assets", []) if a.get("name", "").lower().endswith(".ipa")), None)
         if not ipa_asset: continue
 
+        ipa_name = ipa_asset.get("name", "")
+        # 从 IPA 真实文件名中提取与 Info.plist 完全对应的版本号
+        real_version, build_ver = extract_pili_version_and_build(ipa_name, tag)
+
         date_str = rel.get("published_at", "")[:10]
         download_url = f"{IPA_PROXY_PREFIX}{ipa_asset['browser_download_url']}" if IPA_PROXY_PREFIX else ipa_asset['browser_download_url']
-        build_ver = extract_build_version(ipa_asset.get("name", ""))
 
         versions.append({
-            "version": version,
+            "version": real_version,
             "buildVersion": build_ver,
             "date": date_str,
             "localizedDescription": (rel.get("body") or "").strip() or "PiliPlus iOS 客户端",
@@ -65,9 +76,9 @@ def build_piliplus_app():
             "minOSVersion": "14.0"
         })
         news.append({
-            "title": f"PiliPlus {version}",
-            "identifier": f"pili-{version}",
-            "caption": rel.get("name") or f"Version {version} 发布",
+            "title": f"PiliPlus {tag.lstrip('v')}",
+            "identifier": f"pili-{tag.lstrip('v')}",
+            "caption": rel.get("name") or f"Release {tag}",
             "date": date_str,
             "tintColor": "#00AEEF",
             "notify": True,
@@ -75,6 +86,7 @@ def build_piliplus_app():
             "url": rel.get("html_url")
         })
 
+    # 按语义化版本 + 构建号排序
     versions.sort(key=lambda v: (parse_semver(v["version"]), int(v.get("buildVersion", 0))), reverse=True)
     return {
         "name": "PiliPlus",
@@ -89,15 +101,12 @@ def build_piliplus_app():
     }, news
 
 def build_zhihu_app():
-    # 直接读取知乎官方现成的 altstore-source.json，避开 GitHub API 跨仓 403 权限问题
     source_json = http_get_json(ZHIHU_SOURCE_URL)
     zhihu_app = source_json["apps"][0]
 
-    # 替换图标为 jsDelivr 国内 CDN
     zhihu_app["iconURL"] = "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png"
     zhihu_app["subtitle"] = "轻量、无广告的第三方知乎客户端"
 
-    # 为所有版本的下载链接注入国内加速代理
     for v in zhihu_app.get("versions", []):
         raw_url = v.get("downloadURL", "")
         if IPA_PROXY_PREFIX and not raw_url.startswith(IPA_PROXY_PREFIX):
@@ -126,7 +135,6 @@ def main():
     print("正在拉取 知乎--...")
     zhihu_app, zhihu_news = build_zhihu_app()
 
-    # 1. 生成聚合源 apps.json (包含两款应用)
     combined_source = {
         "name": SOURCE_NAME,
         "identifier": SOURCE_IDENTIFIER,
@@ -139,7 +147,6 @@ def main():
     with open("apps.json", "w", encoding="utf-8") as f:
         json.dump(combined_source, f, indent=2, ensure_ascii=False)
 
-    # 2. 单独生成 zhihu.json (仅包含知乎)
     zhihu_source = {
         "name": "知乎-- (国内镜像源)",
         "identifier": "com.huamu013.ZhihuMinusMinus.source",
