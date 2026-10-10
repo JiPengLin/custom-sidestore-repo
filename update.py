@@ -6,27 +6,36 @@ import urllib.request
 SOURCE_REPO = "bggRGjQaUbCoE/PiliPlus"
 OUTPUT_FILE = "apps.json"
 
-REPO_NAME = "PiliPlus Source"
+# ==================== 国内加速配置 ====================
+# 下载加速代理前缀（末尾带 /），若填 "" 则使用 GitHub 官方原始下载直链
+# 常用稳定备选节点：
+# "https://ghfast.top/"
+# "https://ghproxy.net/"
+# "https://hub.gitmirror.com/"
+IPA_PROXY_PREFIX = "https://ghfast.top/"
+
+# 静态资源改用 jsDelivr CDN 加速（彻底替代被污染的 raw.githubusercontent.com）
+CDN_BASE = "https://cdn.jsdelivr.net/gh/bggRGjQaUbCoE/PiliPlus@main"
+APP_ICON_URL = f"{CDN_BASE}/assets/images/logo/logo.png"
+
+APP_SCREENSHOTS = [
+    f"{CDN_BASE}/assets/screenshots/510shots_so.png",
+    f"{CDN_BASE}/assets/screenshots/174shots_so.png",
+    f"{CDN_BASE}/assets/screenshots/850shots_so.png"
+]
+# =====================================================
+
+REPO_NAME = "PiliPlus Source (国内加速)"
 REPO_IDENTIFIER = "com.custom.piliplus.source"
 REPO_WEBSITE = "https://github.com/bggRGjQaUbCoE/PiliPlus"
 
 APP_NAME = "PiliPlus"
-# 官方真实的 iOS Bundle ID
 APP_BUNDLE_ID = "com.example.piliplus"
 APP_DEVELOPER = "bggRGjQaUbCoE"
 APP_SUBTITLE = "第三方 Bilibili 客户端"
-APP_DESCRIPTION = "PiliPlus iOS 客户端，基于 GitHub Releases 自动同步"
-# 修正路径：补全 logo/ 目录
-APP_ICON_URL = "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/images/logo/logo.png"
+APP_DESCRIPTION = "PiliPlus iOS 客户端，基于 GitHub Releases 自动同步（国内镜像加速版）"
 APP_TINT_COLOR = "#00AEEF"
 APP_MIN_OS = "14.0"
-
-# 补充应用预览截图（SideStore 详情页轮播展示）
-APP_SCREENSHOTS = [
-    "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/510shots_so.png",
-    "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/174shots_so.png",
-    "https://raw.githubusercontent.com/bggRGjQaUbCoE/PiliPlus/main/assets/screenshots/850shots_so.png"
-]
 
 def extract_build_version(filename: str) -> str:
     match = re.search(r"\+(\d+)\.ipa$", filename, re.IGNORECASE)
@@ -73,11 +82,15 @@ def main():
         date_str = rel.get("published_at", "")[:10]
         body = (rel.get("body") or "").strip() or APP_DESCRIPTION
 
+        raw_download_url = ipa_asset.get("browser_download_url", "")
+        # 拼接加速前缀
+        download_url = f"{IPA_PROXY_PREFIX}{raw_download_url}" if IPA_PROXY_PREFIX else raw_download_url
+
         v_item = {
             "version": version,
             "date": date_str,
             "localizedDescription": body,
-            "downloadURL": ipa_asset.get("browser_download_url"),
+            "downloadURL": download_url,
             "size": ipa_asset.get("size", 0),
             "minOSVersion": APP_MIN_OS
         }
@@ -107,8 +120,8 @@ def main():
     source_data = {
         "name": REPO_NAME,
         "identifier": REPO_IDENTIFIER,
-        "subtitle": "PiliPlus 自动更新源",
-        "description": "专为 SideStore 与 LiveContainer 适配的订阅源",
+        "subtitle": "PiliPlus 自动更新源 (国内镜像)",
+        "description": "专为 SideStore 与 LiveContainer 适配的国内加速源",
         "iconURL": APP_ICON_URL,
         "website": REPO_WEBSITE,
         "tintColor": APP_TINT_COLOR,
@@ -120,7 +133,7 @@ def main():
                 "subtitle": APP_SUBTITLE,
                 "localizedDescription": APP_DESCRIPTION,
                 "iconURL": APP_ICON_URL,
-                "screenshots": APP_SCREENSHOTS,  # 补上截图数组
+                "screenshots": APP_SCREENSHOTS,
                 "tintColor": APP_TINT_COLOR,
                 "versions": versions
             }
@@ -131,7 +144,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(source_data, f, indent=2, ensure_ascii=False)
 
-    print(f"成功更新 {OUTPUT_FILE}，最新版本为: {versions[0]['version']}")
+    print(f"成功更新 {OUTPUT_FILE}（已注入国内镜像下载加速）")
 
 if __name__ == "__main__":
     main()
