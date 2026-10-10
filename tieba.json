@@ -1,0 +1,307 @@
+{
+  "name": "TiebaPure (国内镜像源)",
+  "identifier": "com.infinityf4p.TiebaPure.source",
+  "subtitle": "原生 SwiftUI 百度贴吧客户端",
+  "iconURL": "https://cdn.jsdelivr.net/gh/infinityf4p/TiebaPure-iOS@main/TiebaPure/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png",
+  "apps": [
+    {
+      "name": "TiebaPure",
+      "bundleIdentifier": "com.infinityf4p.TiebaPure",
+      "developerName": "infinityf4p",
+      "subtitle": "第三方百度贴吧客户端",
+      "localizedDescription": "原生 SwiftUI 构建的非官方贴吧客户端，支持浏览、搜索、收藏、媒体查看与本地阅读记录（国内镜像加速版）。",
+      "iconURL": "https://cdn.jsdelivr.net/gh/infinityf4p/TiebaPure-iOS@main/TiebaPure/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png",
+      "tintColor": "#4E6EF2",
+      "category": "social",
+      "versions": [
+        {
+          "version": "1.4.15",
+          "buildVersion": "1",
+          "date": "2026-10-10",
+          "localizedDescription": "## What's included\n\n- Stabilizes Home tab reselection and refresh behavior after scrolling.\n- Returning from a thread or search now closes that screen first; the next Home tap refreshes the feed.\n- A Home tap during an in-flight refresh returns to the top without creating a duplicate request.\n- Bumps the app and Open In extension to version `1.4.15` (build `59`).\n\n## Download\n\n`TiebaPure-v1.4.15-unsigned.ipa` is an intentionally unsigned arm64 IPA for local installation/signing.\n\n- Minimum iOS: `16.4`\n- Commit: `5a87225190d6a79b1e3ad3b7d846edd407d416c7`\n- SHA-256: `28fbe31e673b1f2769043456324521afd87d04ade8d92d33832e967c19c31123`\n\nCI `ci-ok` passed on PR #86, including unit tests, iOS compatibility checks, UI smoke tests, iPad layout tests, and the Release build.",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.15/TiebaPure-v1.4.15-unsigned.ipa",
+          "size": 9347637,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.4.14",
+          "buildVersion": "1",
+          "date": "2026-08-24",
+          "localizedDescription": "## 修改内容\n\n- 新增帖子本地保存：支持完整楼层和楼中楼离线阅读、媒体下载、搜索、回复更新、存储管理及备份导入导出。\n- 新增内置与自定义阅读字体，并完善首页重复点击刷新。\n- 自动检测账号登录失效，提示后清理当前登录态，同时避免旧请求或网络中断误触发退出。\n- 修复 iOS 16 嵌套搜索布局递归卡死、文字选择与导航手势冲突，并将媒体、字体、语音和存储文件 I/O 移出主线程。\n- 加固本地帖子并发写入、媒体事务崩溃恢复、备份校验与字体目录一致性。\n\n## 验证\n\n- GitHub Actions ci-ok 全部通过，包含单元测试、iOS 16 兼容检查、iPhone/iPad UI 测试和 Release 构建。\n- App 与扩展均为 1.4.14 (58)、arm64、最低 iOS 16.4；IPA 压缩结构正常且未签名。\n- 发帖和回帖夹具 UI 测试通过；本次未改动认证写入路径，因此未重复进行真实账号写入测试。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.14/TiebaPure-v1.4.14-unsigned.ipa",
+          "size": 3787516,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.4.13",
+          "buildVersion": "1",
+          "date": "2026-08-20",
+          "localizedDescription": "## 修改内容\n\n- 修复多图帖子首图放大后停留在低清过渡图的问题，并增加受内存与帧数限制的 GIF 动画显示。\n- 修复回复倒序分页只作用于当前已加载页面的问题，并完善楼中楼进入动画、下拉/右滑退出和阅读位置恢复。\n- 修复 iOS 18 长按选择帖子文字时可能出现的布局卡死。\n- 修复登录账号发帖、回帖时 TBS 刷新失败的问题；恢复签名登录校验，并保留发送结果不明确时不自动重试的保护。\n\n## 验证\n\n- GitHub Actions `ci-ok` 全部通过。\n- 本地发布请求与身份夹具测试 48 项通过。\n- 真实账号发帖和回帖均验证成功。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.13/TiebaPure-v1.4.13-unsigned.ipa",
+          "size": 3509096,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.4.12",
+          "buildVersion": "1",
+          "date": "2026-08-12",
+          "localizedDescription": "## 修改内容\n\n- 统一发帖、回帖与图片上传的请求身份，完善安全验证响应处理，并明确提示内容删除、账号受限或冻结风险。\n- 修复首页多层导航返回层级，支持从首页直接进入评论区和点赞，并优化显示模式设置。\n- 修复 iOS 18 深层导航及长按选择文字可能卡住的问题。\n- 压缩搜索与帖子回复筛选区域，统一楼层时间、IP 和楼中楼之间的间距。\n- 修复部分帖子主楼缺失的问题：自动补取，必要时显示首页摘要或明确错误，不再只显示评论；屏蔽主楼时显示对应状态。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.12/TiebaPure-v1.4.12-unsigned.ipa",
+          "size": 3490394,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.4.8",
+          "buildVersion": "1",
+          "date": "2026-08-10",
+          "localizedDescription": "## 修改内容\n\n- 最低系统版本调整为 iOS 16.4，并补充标签页、下拉刷新、滚动状态、楼中楼退出和原生返回手势的兼容实现；iOS 18 及以上的现代交互与 iOS 26 Liquid Glass 保持不变。\n- 为浏览历史、最近贴吧、搜索历史、阅读位置和内容草稿增加 iOS 16 安全文件存储与可靠迁移，iOS 17 及以上继续使用 SwiftData。\n- 优化 iPad 横屏双栏布局，提升帖子列表的信息展示宽度，并修复兼容改造引入的栏宽回归。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.8/TiebaPure-v1.4.8-unsigned.ipa",
+          "size": 3335977,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.4.4",
+          "buildVersion": "1",
+          "date": "2026-08-08",
+          "localizedDescription": "## 修改内容\n\n- 修复注销、切换账号、收藏和签到时的状态竞态，提升浏览历史持久化及删除返回的稳定性。\n- 优化图片、视频和首页内容的内存占用；加强远程媒体校验，并移除上传图片中的定位等敏感元数据。\n- 表情面板改为固定底部托盘，修复表情图片加载后按钮失效及键盘切换问题。\n- 视频显式启用播放音频会话，修复静音开关或 LiveContainer 宿主环境下没有声音。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.4/TiebaPure-v1.4.4-unsigned.ipa",
+          "size": 3101882,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.4.2",
+          "buildVersion": "1",
+          "date": "2026-08-08",
+          "localizedDescription": "## 修改内容\n\n- 帖子收藏改为只用贴吧账号的云端收藏：帖子页星标读取账号收藏状态，收藏列表来自账号，支持搜索、按阅读进度筛选和批量取消；本机收藏数据在首次启动时清除，阅读位置仍保留在本机。\n- 新增贴吧签到：可一键为关注的贴吧签到，也可以设置每天第一次打开时自动签到。\n- 进吧界面的贴吧改为方块显示；最近浏览新增「管理」，可删除单个或一次清空；移除首页的刷新按钮。\n- 吧页点击列表图片改为打开全屏图片，与首页、搜索和用户主页一致。\n- 修复按吧名进入贴吧时误报「服务器暂时不可用（301）」。\n- 修复帖子正文里的链接点不动。\n- 帖子页滚动性能优化：跨行复用段落高度与文本视图。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.2/TiebaPure-v1.4.2-unsigned.ipa",
+          "size": 3006440,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.4.1",
+          "buildVersion": "1",
+          "date": "2026-08-04",
+          "localizedDescription": "## 修改内容\n\n- 重新设计用户主页：移除背景图，调整头像、资料和统计布局，关注按钮改为统一的浅蓝色样式。\n- 更新 README 的未登录真实页面截图和功能说明。\n- 底栏改为 iOS 26 原生悬浮 Liquid Glass 样式；修复底部灰色区域遮挡和刷新容器裁切，让内容自然延伸到底栏后方。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.1/TiebaPure-v1.4.1-unsigned.ipa",
+          "size": 2876856,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.3.9",
+          "buildVersion": "1",
+          "date": "2026-08-02",
+          "localizedDescription": "## 主要更新\n\n- 完善本机帖子收藏、浏览历史、阅读位置、分享入口与阅读偏好设置。\n- 支持语音回复播放，改进视频预览、刷新状态和媒体返回体验。\n- 增加用户主页、关注关系与社交状态管理；用户主页改为 TiebaPure 统一的简洁无背景布局。\n- 加入实验性的发帖、回帖与楼中楼回复能力，并提供“允许发帖 / 允许回帖 / 允许点赞”独立开关；关闭点赞后仍显示赞数。\n- 压缩楼层时间、IP 与回复操作的竖向占用，并补齐小屏、动态字体和无障碍状态。\n\n## 验证\n\n- PR #8 至 PR #14 均完成审查并按顺序合并；最终 PR 的 GitHub Actions 单元测试、两轮 fixture UI smoke 和 Release 构建均通过。\n- 本地完整单元测试执行 582 项，0 失败、7 项按设计跳过；用户主页与写操作开关完成标准字号和 Accessibility XXXL 定向 UI 验收。\n- `xcodebuild analyze`、无签名 Release 设备构建和 XcodeGen 重建一致性检查均通过。\n- 最终 IPA 从合并后的 `main` 提交 `ef75c562a644c3d7148639a81027f378cd00dd1b` 构建，并核验 ZIP 结构、版本、最低系统、隐私清单、许可证、分享扩展、ProMotion 配置、arm64 架构和未签名状态。\n\n## 安装说明\n\n附件为 unsigned IPA，需要使用自己的 Apple 证书和描述文件签名后安装。\n\n- 版本：1.3.9 (28)\n- 最低系统版本：iOS 18.0\n- Bundle ID：dev.infinityf4p.tiebapure\n- SHA-256：`d2b22d055e600070ab372e08192d1d45c404ef26ce2efda224781fe7b76b1d4d`\n\n## 致谢与许可证\n\nTiebaPure-iOS 以 GPL-3.0-only 发布。感谢 TiebaLite 为早期开发提供参考，也感谢 aiotieba 对贴吧协议的整理与开源实现。SwiftProtobuf 采用 Apache-2.0 许可证及 Runtime Library Exception。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.3.9/TiebaPure-v1.3.9-unsigned.ipa",
+          "size": 2877256,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.3.1",
+          "buildVersion": "1",
+          "date": "2026-07-31",
+          "localizedDescription": "## 主要更新\n\n- 将 Proto 输入收敛为 26 个 TiebaPure 自行维护的最小协议定义，并保留生成一致性与 wire fixture 验证。\n- 移除内置 WebP 表情资源，改为通过 HTTPS 百度 CDN 按需下载并使用有界缓存。\n- 更新开源许可、关于页、合成截图与 CI；应用包内包含 GPL 和 SwiftProtobuf Apache-2.0 许可证。\n- 更新为 Pure Page 自适应应用图标，并加入 iOS 深色外观图标。\n\n## 验证\n\n- PR #6 和 PR #7 的 GitHub Actions 均通过。\n- Proto/CDN 迁移完成 326 项单元测试连续两轮、90 项 UI 测试连续两轮、SE/iPad 视觉矩阵及匿名线上冒烟。\n- 图标变更完成 326 项单元测试、两轮 fixture UI 冒烟及 Release 构建。\n- 最终 IPA 从合并后的 `main` 提交 `9024bef` 构建，并核验 ZIP 结构、版本、最低系统、浅色/深色图标、隐私清单、许可证、ProMotion 配置和未签名状态。\n\n## 安装说明\n\n附件为 unsigned IPA，需要使用自己的 Apple 证书和描述文件签名后安装。\n\n- 版本：1.3.1 (19)\n- 最低系统版本：iOS 18.0\n- Bundle ID：dev.infinityf4p.tiebapure\n- SHA-256：`8ac65ea763d378a527a14e7ded78c002f3e7e3766ae40b2bd3627a6b10134e39`\n\n## 致谢与许可证\n\nTiebaPure-iOS 以 GPL-3.0-only 发布。感谢 TiebaLite 为早期开发提供参考，也感谢 aiotieba 对贴吧协议的整理与开源实现。SwiftProtobuf 采用 Apache-2.0 许可证及 Runtime Library Exception。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.3.1/TiebaPure-v1.3.1-unsigned.ipa",
+          "size": 2225487,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.2.4",
+          "buildVersion": "1",
+          "date": "2026-07-30",
+          "localizedDescription": "## 主要更新\n\n- 完善帖子阅读位置恢复、应用内链接路由、消息入口、内容过滤与 iPad 状态保存。\n- 新增贴吧屏蔽，统一下拉刷新交互，并完善吧页分类、最新排序和标题滚动表现。\n- 图片页新增查看原图、大小与进度显示、下载入口，并完善单点返回、首图右划、上下及斜向拖动。\n- 图片转场和缩放动画启用 ProMotion 自适应刷新率，同时保留多图横向翻页与放大后的原生二维移动。\n\n## 验证\n\n- 本机全量单元测试：308 项执行、1 项按设计跳过、0 失败。\n- iPhone 17 图片相关 4 条 UI 回归通过；iPhone SE 3 完整退出流程连续 2 轮通过；iPad Pro 11-inch 完整退出流程通过。\n- PR #3 的 GitHub Actions `ci-ok` 已通过，覆盖版本门禁、XcodeGen 重建、全量单测、重复 fixture UI 冒烟、Release 构建与隐私清单检查。\n- IPA 解包、版本元数据、最低系统版本、ProMotion 配置、无签名结构和压缩完整性均已核验。\n\n## 安装说明\n\n附件为 unsigned IPA，需要使用自己的 Apple 证书和描述文件签名后安装。\n\n版本：`1.2.4 (14)`  \n最低系统版本：iOS 18.0  \nBundle ID：`dev.infinityf4p.tiebapure`  \nSHA-256：`691703c2f07002c5e120256db8e8430dea3a6452ac9f3e8bbdcfc7da9dfc4482`\n\n## 来源与许可证\n\n本项目借鉴并移植自 [HuanCheng65/TiebaLite](https://github.com/HuanCheng65/TiebaLite/tree/4.0-dev)，固定参考版本为 `4.0-dev@2885b2aabbbf47aba7bf12b1cd7cbc03b1f5ec15`。项目以 GPL-3.0-only 发布，详细来源与资产说明见仓库内 `THIRD_PARTY_NOTICES.md`。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.2.4/TiebaPure-v1.2.4-unsigned.ipa",
+          "size": 2669586,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.1.0",
+          "buildVersion": "1",
+          "date": "2026-07-25",
+          "localizedDescription": "## 主要更新\n\n- 新增本机浏览历史（最多 500 条）、帖子收藏与阅读位置记录。\n- 新增跟随系统、浅色和深色外观设置。\n- 新增用户主页、关注用户入口，并完善关注用户、关注贴吧和点赞交互。\n- 完善帖子、回复、楼中楼、用户名链接和多种字号下的布局显示。\n- iOS 26 使用原生内容区右划返回，iOS 18–25 保留边缘右划返回。\n- 完善图片预览、缩放、下载、单击返回及来源位置转场。\n\n## 安全与隐私\n\n- 登录会话使用 Keychain 和受限 Cookie，网络请求使用独立的临时会话。\n- 包内包含可解析的 `PrivacyInfo.xcprivacy`。\n\n## 验证\n\n- iPhone 17 Pro / iOS 26.1 单元测试：201 通过、1 项按设计跳过、0 失败。\n- XcodeGen 重建一致性、Release `iphoneos` 构建、IPA 解包完整性、版本元数据、arm64 架构和隐私清单检查均通过。\n- 发布标签对应的 `main` 提交已通过 GitHub Actions。\n\n## 安装说明\n\n附件为 unsigned IPA，需要使用自己的 Apple 证书和描述文件签名后安装。\n\n版本：`1.1.0 (7)`  \n最低系统版本：iOS 18.0  \nBundle ID：`dev.infinityf4p.tiebapure`  \nSHA-256：`0629f7fc7c12833c07f9dd26c69746bc7bcd7e51fd3c98e99ae6c2ce948ec457`\n\n## 来源与许可证\n\n本项目借鉴并移植自 [HuanCheng65/TiebaLite](https://github.com/HuanCheng65/TiebaLite/tree/4.0-dev)，固定参考版本为 `4.0-dev@2885b2aabbbf47aba7bf12b1cd7cbc03b1f5ec15`。项目以 GPL-3.0-only 发布，详细来源与资产说明见仓库内 `THIRD_PARTY_NOTICES.md`。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.1.0/TiebaPure-v1.1.0-unsigned.ipa",
+          "size": 2464523,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.0.2",
+          "buildVersion": "1",
+          "date": "2026-07-14",
+          "localizedDescription": "## 主要修复\n\n- 修复 iOS 验证码登录：兼容百度在 WebKit 中实际下发的 Cookie 属性，在精确 HTTPS 成功回调后安全提取并保存账号。\n- 登录成功回调不再渲染，避免其 Universal Link 调起官方贴吧 App；同时拦截 `window.open`、外部 App scheme 和应用商店跳转。\n- 修复首页和帖子页下拉刷新距离、非顶部误触发、搜索框错位与刷新动画问题。\n- 搜索改为独立页面，支持搜索历史、一次返回和中间右滑返回。\n- 恢复帖子、搜索及楼中楼的交互式返回动画，并修复图片区域右滑误打开预览。\n- 帖子主贴、楼层回复和楼中楼内容不再被单行或省略号截断；优化回复布局、分隔线和“查看全部回复”高度。\n- 图片查看器支持再次点击返回来源页及保存原图，并加强下载大小、MIME、像素和 URL 安全校验。\n- 统一公开作者信息为 `infinityf4p`，并保留 TiebaLite 来源、GPL 和第三方资源说明。\n\n## 安全与隐私\n\n- 登录账号使用 Keychain，登录 WebView 使用非持久数据仓库，API 使用独立 ephemeral URLSession。\n- Release 版本不输出登录诊断，不包含 DEBUG 登录夹具、签名或描述文件。\n- 隐私清单与 `PRIVACY.md` 已同步更新。\n\n## 验证\n\n- iPhone 17 / iOS 26.1 模拟器完整测试：171 通过、4 项按条件跳过、0 失败（共 175 项）。\n- `xcodebuild analyze`：通过。\n- unsigned IPA 结构、隐私清单、作者信息和私钥/令牌扫描：通过。\n\n## 安装说明\n\nRelease 附件为 unsigned IPA，安装前需要使用你自己的证书和描述文件签名。\n\nSHA-256：`1aac980cf97a77b57af27b79508e966c71fe3981f52c859a8a3e567bb5237031`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.0.2/TiebaPure-v1.0.2-unsigned.ipa",
+          "size": 2061440,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.0.1",
+          "buildVersion": "1",
+          "date": "2026-07-14",
+          "localizedDescription": "# TiebaPure-iOS v1.0.1\n\n本版本集中修复首页刷新、搜索流程、帖子与楼中楼显示，以及图片查看交互。\n\n## 修复与改进\n\n- 缩短首页和帖子页的下拉刷新触发距离，修复刷新后搜索框裁切、帖子列表顶部异常留白\n- 将搜索移动到右上角独立页面，支持一步返回、中间右划返回和本地搜索历史管理\n- 帖子主贴、评论及楼中楼改为完整显示，不再错误限制为单行或出现省略号\n- 优化“查看全部回复”、回复头像/用户名/正文、时间与 IP 属地的间距和对齐\n- 楼中楼增加清晰分界线和中间右划关闭；恢复帖子页中间右划返回\n- 图片查看页支持再次点击返回，并增加保存原图到系统照片功能\n- 补充刷新、搜索历史、正文映射、返回手势及 fixture UI 回归测试\n\n## 安装说明\n\n附件 `TiebaPure-unsigned.ipa` 为未签名 IPA。安装前必须使用你自己的开发者证书或签名工具完成签名；本项目不提供任何签名证书。\n\n## 来源与许可\n\n本项目借鉴并移植自 [HuanCheng65/TiebaLite](https://github.com/HuanCheng65/TiebaLite/tree/4.0-dev)，固定参考版本为 `4.0-dev@2885b2aabbbf47aba7bf12b1cd7cbc03b1f5ec15`。\n\n代码和可追溯衍生材料采用 `GPL-3.0-only`。54 个 PNG 表情资源的来源与再分发许可未知；该披露不消除版权风险。本项目为非官方项目，与百度及 TiebaLite 原作者不存在隶属或认可关系。\n\n## 校验\n\n- 版本：`1.0.1 (2)`\n- Bundle ID：`dev.kevinchen.tiebapure`\n- SHA-256：`07b4168824f38689d4155a2cd51abdc73d978a976b9a8a8f6a3ffe399c9f933b`\n- [GitHub Actions 验证](https://github.com/infinityf4p/TiebaPure-iOS/actions/runs/29298442470)",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.0.1/TiebaPure-unsigned.ipa",
+          "size": 2031674,
+          "minOSVersion": "16.4"
+        },
+        {
+          "version": "1.0.0",
+          "buildVersion": "1",
+          "date": "2026-07-13",
+          "localizedDescription": "# TiebaPure-iOS v1.0.0\n\n首个公开版本。非官方百度贴吧只读 SwiftUI 客户端。\n\n## 功能\n\n- 访客首页、进吧、吧内列表、主题与回复搜索\n- 帖子、楼中楼、图片和视频查看\n- 可选的百度手机号验证码登录\n- Dynamic Type、深色模式、Reduce Motion 和 VoiceOver 适配\n\n## 安全与隐私\n\n- 登录凭证仅存储在 Keychain\n- 使用临时网络会话、严格的 HTTPS/百度域边界和响应大小限制\n- 应用包内包含 `PrivacyInfo.xcprivacy`\n\n## 安装说明\n\n附件 `TiebaPure-unsigned.ipa` 为未签名 IPA。安装前必须使用你自己的开发者证书或签名工具完成签名；本项目不提供任何签名证书。\n\n## 来源与许可\n\n本项目借鉴并移植自 [HuanCheng65/TiebaLite](https://github.com/HuanCheng65/TiebaLite/tree/4.0-dev)，固定参考版本为 `4.0-dev@2885b2aabbbf47aba7bf12b1cd7cbc03b1f5ec15`。\n\n代码和可追溯衍生材料采用 `GPL-3.0-only`。54 个 PNG 表情资源的来源与再分发许可未知；该披露不消除版权风险。本项目为非官方项目，与百度及 TiebaLite 原作者不存在隶属或认可关系。\n\n## 校验\n\n- 版本：`1.0.0 (1)`\n- Bundle ID：`dev.kevinchen.tiebapure`\n- SHA-256：`3adb94d62528e6fa6e64a81ed85e692e77834f5842947754fa740fdce25155c6`\n- [最终 GitHub Actions 验证](https://github.com/infinityf4p/TiebaPure-iOS/actions/runs/29218501165)",
+          "downloadURL": "https://gh-proxy.com/https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.0.0/TiebaPure-unsigned.ipa",
+          "size": 1952775,
+          "minOSVersion": "16.4"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "TiebaPure 1.4.15",
+      "identifier": "tieba-1.4.15",
+      "caption": "TiebaPure-iOS v1.4.15",
+      "date": "2026-10-10",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.15"
+    },
+    {
+      "title": "TiebaPure 1.4.14",
+      "identifier": "tieba-1.4.14",
+      "caption": "TiebaPure-iOS v1.4.14",
+      "date": "2026-08-24",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.14"
+    },
+    {
+      "title": "TiebaPure 1.4.13",
+      "identifier": "tieba-1.4.13",
+      "caption": "TiebaPure-iOS v1.4.13",
+      "date": "2026-08-20",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.13"
+    },
+    {
+      "title": "TiebaPure 1.4.12",
+      "identifier": "tieba-1.4.12",
+      "caption": "TiebaPure-iOS v1.4.12",
+      "date": "2026-08-12",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.12"
+    },
+    {
+      "title": "TiebaPure 1.4.8",
+      "identifier": "tieba-1.4.8",
+      "caption": "TiebaPure-iOS v1.4.8",
+      "date": "2026-08-10",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.8"
+    },
+    {
+      "title": "TiebaPure 1.4.4",
+      "identifier": "tieba-1.4.4",
+      "caption": "TiebaPure-iOS v1.4.4",
+      "date": "2026-08-08",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.4"
+    },
+    {
+      "title": "TiebaPure 1.4.2",
+      "identifier": "tieba-1.4.2",
+      "caption": "TiebaPure-iOS v1.4.2",
+      "date": "2026-08-08",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.2"
+    },
+    {
+      "title": "TiebaPure 1.4.1",
+      "identifier": "tieba-1.4.1",
+      "caption": "TiebaPure-iOS v1.4.1",
+      "date": "2026-08-04",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.1"
+    },
+    {
+      "title": "TiebaPure 1.3.9",
+      "identifier": "tieba-1.3.9",
+      "caption": "TiebaPure-iOS v1.3.9",
+      "date": "2026-08-02",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.3.9"
+    },
+    {
+      "title": "TiebaPure 1.3.1",
+      "identifier": "tieba-1.3.1",
+      "caption": "TiebaPure-iOS v1.3.1",
+      "date": "2026-07-31",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.3.1"
+    },
+    {
+      "title": "TiebaPure 1.2.4",
+      "identifier": "tieba-1.2.4",
+      "caption": "TiebaPure-iOS v1.2.4",
+      "date": "2026-07-30",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.2.4"
+    },
+    {
+      "title": "TiebaPure 1.1.0",
+      "identifier": "tieba-1.1.0",
+      "caption": "TiebaPure-iOS v1.1.0",
+      "date": "2026-07-25",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.1.0"
+    },
+    {
+      "title": "TiebaPure 1.0.2",
+      "identifier": "tieba-1.0.2",
+      "caption": "TiebaPure-iOS v1.0.2",
+      "date": "2026-07-14",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.0.2"
+    },
+    {
+      "title": "TiebaPure 1.0.1",
+      "identifier": "tieba-1.0.1",
+      "caption": "TiebaPure-iOS v1.0.1",
+      "date": "2026-07-14",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.0.1"
+    },
+    {
+      "title": "TiebaPure 1.0.0",
+      "identifier": "tieba-1.0.0",
+      "caption": "TiebaPure-iOS v1.0.0",
+      "date": "2026-07-13",
+      "tintColor": "#4E6EF2",
+      "notify": true,
+      "appID": "com.infinityf4p.TiebaPure",
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.0.0"
+    }
+  ]
+}
