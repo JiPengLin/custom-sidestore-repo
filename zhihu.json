@@ -1,0 +1,49 @@
+{
+  "name": "知乎-- (国内镜像源)",
+  "identifier": "com.huamu013.ZhihuMinusMinus.source",
+  "subtitle": "轻量、无广告的第三方知乎客户端",
+  "iconURL": "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png",
+  "apps": [
+    {
+      "name": "知乎--",
+      "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
+      "developerName": "huamurui",
+      "localizedDescription": "轻量、无广告的第三方知乎客户端，支持浏览、搜索、收藏和创作。",
+      "iconURL": "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png",
+      "category": "social",
+      "versions": [
+        {
+          "version": "0.8.1",
+          "buildVersion": "1",
+          "date": "2026-10-09",
+          "downloadURL": "https://gh-proxy.com/https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.8.1/zhihu-minus-minus-v0.8.1-unsigned.ipa",
+          "size": 16172235,
+          "minOSVersion": "15.1"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "Allow app to access your camera",
+          "NSFaceIDUsageDescription": "Allow app to access your Face ID biometric data.",
+          "NSMicrophoneUsageDescription": "Allow app to access your microphone",
+          "NSPhotoLibraryAddUsageDescription": "Allow app to save photos",
+          "NSPhotoLibraryUsageDescription": "允许知乎--访问你的照片，以便在评论和正文中上传图片。"
+        }
+      },
+      "subtitle": "轻量、无广告的第三方知乎客户端"
+    }
+  ],
+  "news": [
+    {
+      "title": "知乎-- 0.8.1",
+      "identifier": "zhihu-0.8.1",
+      "caption": "Version 0.8.1 发布",
+      "date": "2026-10-09",
+      "tintColor": "#0066FF",
+      "notify": true,
+      "appID": "com.huamu013.ZhihuMinusMinus",
+      "url": "https://github.com/huamurui/zhihu-minus-minus/releases"
+    }
+  ]
+}
