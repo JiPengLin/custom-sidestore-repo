@@ -1,12 +1,15 @@
-name: Sync PiliPlus Source
+name: Sync Sources
 
 on:
   schedule:
-    - cron: "0 */2 * * *" # 每 2 小时自动轮询一次
-  workflow_dispatch:      # 支持手动一键触发
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - 'update.py'
 
 concurrency:
-  group: sync-piliplus
+  group: sync-sources
   cancel-in-progress: true
 
 jobs:
@@ -25,9 +28,9 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add apps.json
+          git add apps.json zhihu.json
           if ! git diff --cached --quiet; then
-            git commit -m "chore: auto-update apps.json"
+            git commit -m "chore: auto-update apps and zhihu sources"
             git push
           else
             echo "版本无变动，跳过提交。"
