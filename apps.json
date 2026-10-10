@@ -21,6 +21,15 @@
       "versions": [
         {
           "version": "2.1.6",
+          "buildVersion": "5472",
+          "date": "2026-10-10",
+          "localizedDescription": "专栏支持跳转至评论 #3213\r\n其他调整 #3208 by @My-Responsitories\r\n\r\n修复 bug\r\n修复搜索风控验证 #3106\r\n修复窗口大小变化时图片闪烁 #2685\r\n修复安卓视频暂停时画面裁切问题 #3034 by @Hdy08",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6.2/PiliPlus_ios_2.1.6%2B5472.ipa",
+          "size": 24353925,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.6",
           "buildVersion": "5471",
           "date": "2026-10-10",
           "localizedDescription": "专栏支持跳转至评论 #3213\r\n其他调整 #3208 by @My-Responsitories\r\n\r\n修复 bug\r\n修复搜索风控验证 #3106\r\n修复窗口大小变化时图片闪烁 #2685\r\n修复安卓视频暂停时画面裁切问题 #3034 by @Hdy08",
@@ -189,15 +198,6 @@
           "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.8/PiliPlus_ios_2.0.8%2B5014.ipa",
           "size": 23458920,
           "minOSVersion": "14.0"
-        },
-        {
-          "version": "2.0.7",
-          "buildVersion": "4956",
-          "date": "2026-05-15",
-          "localizedDescription": "修复 #2075 #2087\r\n其他调整 #2100 by @My-Responsitories\r\n定时发布动态不立即检查是否可见 #2059 by @uhiovk",
-          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.7.2/PiliPlus_ios_2.0.7%2B4956.ipa",
-          "size": 23837357,
-          "minOSVersion": "14.0"
         }
       ]
     },
@@ -232,6 +232,16 @@
     }
   ],
   "news": [
+    {
+      "title": "PiliPlus 2.1.6.2",
+      "identifier": "pili-2.1.6.2",
+      "caption": "2.1.6.2",
+      "date": "2026-10-10",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6.2"
+    },
     {
       "title": "PiliPlus 2.1.6.1",
       "identifier": "pili-2.1.6.1",
@@ -431,16 +441,6 @@
       "notify": true,
       "appID": "com.example.piliplus",
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.8"
-    },
-    {
-      "title": "PiliPlus 2.0.7.2",
-      "identifier": "pili-2.0.7.2",
-      "caption": "2.0.7.2",
-      "date": "2026-05-15",
-      "tintColor": "#00AEEF",
-      "notify": true,
-      "appID": "com.example.piliplus",
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.7.2"
     }
   ]
 }
