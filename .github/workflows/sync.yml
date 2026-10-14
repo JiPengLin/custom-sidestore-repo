@@ -27,9 +27,9 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add apps.json zhihu.json tieba.json
+          git add apps.json zhihu.json tieba.json piliplus.json
           if ! git diff --cached --quiet; then
-            git commit -m "chore: auto-update apps, zhihu and tieba sources"
+            git commit -m "chore: auto-update apps, zhihu, tieba and piliplus sources"
             git push
           else
             echo "版本无变动，跳过提交。"
