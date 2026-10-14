@@ -222,7 +222,19 @@ def main():
     with open("tieba.json", "w", encoding="utf-8") as f:
         json.dump(tieba_source, f, indent=2, ensure_ascii=False)
 
-    print("已成功更新 apps.json, zhihu.json 和 tieba.json！")
+    # 4. 单独生成 piliplus.json
+    pili_source = {
+        "name": "PiliPlus (国内镜像源)",
+        "identifier": "com.example.piliplus.source",
+        "subtitle": "第三方 Bilibili 客户端",
+        "iconURL": PILI_ICON,
+        "apps": [pili_app],
+        "news": pili_news
+    }
+    with open("piliplus.json", "w", encoding="utf-8") as f:
+        json.dump(pili_source, f, indent=2, ensure_ascii=False)
+
+    print("已成功更新 apps.json, zhihu.json, tieba.json 和 piliplus.json！")
 
 if __name__ == "__main__":
     main()
