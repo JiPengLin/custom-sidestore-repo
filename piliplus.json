@@ -1,0 +1,406 @@
+{
+  "name": "PiliPlus (国内镜像源)",
+  "identifier": "com.example.piliplus.source",
+  "subtitle": "第三方 Bilibili 客户端",
+  "iconURL": "https://cdn.jsdelivr.net/gh/bggRGjQaUbCoE/PiliPlus@main/assets/images/logo/logo.png",
+  "apps": [
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "第三方 Bilibili 客户端",
+      "localizedDescription": "PiliPlus iOS 客户端，基于 GitHub Releases 自动同步（国内镜像加速版）",
+      "iconURL": "https://cdn.jsdelivr.net/gh/bggRGjQaUbCoE/PiliPlus@main/assets/images/logo/logo.png",
+      "screenshots": [
+        "https://cdn.jsdelivr.net/gh/bggRGjQaUbCoE/PiliPlus@main/assets/screenshots/510shots_so.png",
+        "https://cdn.jsdelivr.net/gh/bggRGjQaUbCoE/PiliPlus@main/assets/screenshots/174shots_so.png",
+        "https://cdn.jsdelivr.net/gh/bggRGjQaUbCoE/PiliPlus@main/assets/screenshots/850shots_so.png"
+      ],
+      "tintColor": "#00AEEF",
+      "versions": [
+        {
+          "version": "2.1.6",
+          "buildVersion": "5472",
+          "date": "2026-10-10",
+          "localizedDescription": "专栏支持跳转至评论 #3213\r\n其他调整 #3208 by @My-Responsitories\r\n\r\n修复 bug\r\n修复搜索风控验证 #3106\r\n修复窗口大小变化时图片闪烁 #2685\r\n修复安卓视频暂停时画面裁切问题 #3034 by @Hdy08",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6.2/PiliPlus_ios_2.1.6%2B5472.ipa",
+          "size": 24353925,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.6",
+          "buildVersion": "5471",
+          "date": "2026-10-10",
+          "localizedDescription": "专栏支持跳转至评论 #3213\r\n其他调整 #3208 by @My-Responsitories\r\n\r\n修复 bug\r\n修复搜索风控验证 #3106\r\n修复窗口大小变化时图片闪烁 #2685\r\n修复安卓视频暂停时画面裁切问题 #3034 by @Hdy08",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6.1/PiliPlus_ios_2.1.6%2B5471.ipa",
+          "size": 24353584,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.6",
+          "buildVersion": "5453",
+          "date": "2026-10-05",
+          "localizedDescription": "支持离线合集归档\r\n支持离线/更新空降片段\r\n添加视频过滤作用域详情\r\n支持切换`番剧`/`剧集`季度\r\n支持横屏时在侧栏显示`番剧`列表\r\n直播聊天显示`主播`标识 #3156\r\n直播聊天只显示点亮的牌子 #3155\r\n用户未直播时在主页显示入口按钮 #3033\r\n从视频切到直播不影响视频倍速 #3112\r\n支持转发同时评论 #3135\r\n@ 用户时置顶被`回复`/`转发`用户 #3123\r\n视频控制栏控件溢出处理 #3085\r\n添加英文文档 #3131 by @maoawa\r\n桌面端画中画记忆窗口位置大小 #2997\r\n收藏夹已满且未收藏时禁用选中 #3113\r\niOS 支持系统 PIP #3160 by @AotianNeo\r\n黑名单屏蔽扩展本地屏蔽，增加过滤搜索、评论\r\n支持按 `Enter` 保存截图 #3101 by @403bug\r\n支持从媒体会话向前/后跳转音视频 #2964 co-by @silverwolf-lv9999\r\n\r\n修复弹幕速度 #3136\r\n修复收藏夹视频跳转 #3137\r\n修复下滑关闭侧栏主页 #3160\r\n修复触控板浏览图片 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/183#issuecomment-5976539299\r\n修复 Windows 26H2 任务栏不在底部时，退出全屏出现窗口偏移 #2901",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6/PiliPlus_ios_2.1.6%2B5453.ipa",
+          "size": 24083344,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.5",
+          "buildVersion": "5410",
+          "date": "2026-09-25",
+          "localizedDescription": "支持自定义主题颜色 #3009\r\n综合搜索用户过滤黑名单 #3043\r\n可复制文本工具栏默认添加站内搜索按钮 #2984\r\n支持保存 SC 为图片 co-by @My-Responsitories\r\n支持 Windows deeplink #2673 by @HChaZZY\r\n支持 Linux deeplink #2931 by @Tobiichi-Origuchi\r\n降低桌面端 PIP 大小限制 #2735 #2982 by @Aclguh\r\n桌面端支持保存全部图片 #2920 #2983 by @My-Responsitories\r\nLinux 支持内嵌 WebView #3014 #3016 by @Tobiichi-Origuchi co-by @My-Responsitories\r\n其他调整 #2962 #3025 #3027 by @My-Responsitories\r\n\r\n修复分 P 视频链接 #2963\r\n修复滑动快进/退震动失效 #2966\r\n修复小窗模式下画面被 SC 遮挡 #3005\r\n修复无痕模式出现直播入场提示 #2971\r\n修复多次点击截图保存退出视频页面 #3017\r\n修复更新媒体通知、后台连播 #2761 #2943\r\n修复 iOS 静音模式下偶发视频无声修复 #3039 @sounfury\r\n修复部分安卓无法登录 #2930 #3063 by @Tobiichi-Origuchi\r\n修复 macOS 切换全屏控件无法点击 #2917 #2976 by @milk2715093695",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.5/PiliPlus_ios_2.1.5%2B5410.ipa",
+          "size": 23999265,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.4",
+          "buildVersion": "5348",
+          "date": "2026-09-13",
+          "localizedDescription": "增加综合搜索\r\n收藏页支持切换页码为倒序\r\n重构定位视频加载前页视频逻辑\r\n支持分开查看动态`赞`与`转发`详情\r\n收藏夹`复制`/`移动`视频时保持顺序 #2850\r\n其他调整 #2889 by @My-Responsitories\r\n播放器优化 #2873 by @My-Responsitories\r\n支持点击动态/评论表情显示 Tooltip，默认关 #2918\r\n\r\n修复 #2892 #2899 #2909 #2949 #2950 #2956\r\n修复 #2882 by @Tobiichi-Origuchi",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.4/PiliPlus_ios_2.1.4%2B5348.ipa",
+          "size": 23983183,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.3",
+          "buildVersion": "5315",
+          "date": "2026-09-05",
+          "localizedDescription": "限制直播聊天缓存条目\r\n音频播放页配置音量均衡 #2598 by @Eazed-Yu\r\n限制离线弹幕下载并发 #2800 by @KIDA-MNESIA\r\n关注分组支持切换排序方式 #2772 co-by @defghy\r\nLinux 支持 WebView #2843 by @Tobiichi-Origuchi\r\n支持显示定时关闭剩余时间 #2461 co-by @SXP-Simon\r\n更新直播弹幕屏蔽页面，实现直播弹幕屏蔽 #2821 by @Starfallan\r\niOS 设置 `ITSAppUsesNonExemptEncryption` 属性 #2789 by @maoawa\r\n评论输入框增加 LaTeX 公式转 Unicode 开关 #2792 by @milk2715093695\r\n修复部分视频画质切换问题 #2810 #2828 by @TomorrowX6 co-by @My-Responsitories\r\n\r\n优化字体自重 #2787 by @My-Responsitories\r\n优化/修复账号逻辑 #2794 #2797 by @KIDA-MNESIA #2817 by @My-Responsitories\r\n\r\n修复 #2709 #2816 #2836 #2837",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.3.1/PiliPlus_ios_2.1.3%2B5315.ipa",
+          "size": 23970852,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.3",
+          "buildVersion": "5314",
+          "date": "2026-09-05",
+          "localizedDescription": "限制直播聊天缓存条目\r\n音频播放页配置音量均衡 #2598 by @Eazed-Yu\r\n限制离线弹幕下载并发 #2800 by @KIDA-MNESIA\r\n关注分组支持切换排序方式 #2772 co-by @defghy\r\nLinux 支持 WebView #2843 by @Tobiichi-Origuchi\r\n支持显示定时关闭剩余时间 #2461 co-by @SXP-Simon\r\n更新直播弹幕屏蔽页面，实现直播弹幕屏蔽 #2821 by @Starfallan\r\niOS 设置 `ITSAppUsesNonExemptEncryption` 属性 #2789 by @maoawa\r\n评论输入框增加 LaTeX 公式转 Unicode 开关 #2792 by @milk2715093695\r\n修复部分视频画质切换问题 #2810 #2828 by @TomorrowX6 co-by @My-Responsitories\r\n\r\n优化字体自重 #2787 by @My-Responsitories\r\n优化/修复账号逻辑 #2794 #2797 by @KIDA-MNESIA #2817 by @My-Responsitories\r\n\r\n修复 #2709 #2816 #2836 #2837",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.3/PiliPlus_ios_2.1.3%2B5314.ipa",
+          "size": 23968767,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.2",
+          "buildVersion": "5281",
+          "date": "2026-08-30",
+          "localizedDescription": "修复 bug",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2.3/PiliPlus_ios_2.1.2%2B5281.ipa",
+          "size": 23936722,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.2",
+          "buildVersion": "5277",
+          "date": "2026-08-29",
+          "localizedDescription": "回退 #2446\r\n显示视频分 P 序号 #2717\r\n弹幕应用 APP 字体 #2712\r\n支持导入字体 co-by @My-Responsitories\r\n其他调整 #2734 #2767 by @My-Responsitories\r\n\r\n修复 #2716 #2731\r\n修复部分安卓设备无法显示登录验证码 #2642 #2713 by @My-Responsitories",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2.2/PiliPlus_ios_2.1.2%2B5277.ipa",
+          "size": 23936202,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.2",
+          "buildVersion": "5255",
+          "date": "2026-08-26",
+          "localizedDescription": "支持加载 `bcc` 格式字幕 #2705\r\n播放器启用自动重连 #2446 by @AlinJiang\r\n安卓支持允许三方 APP 访问私有存储，默认关\r\n支持复制设备信息 #2688 by @My-Responsitories\r\n调整部分设置选项界面 #2683 by @My-Responsitories\r\n\r\n修复 #2697 by @My-Responsitories\r\n修复 #2637 #2638 #2647 #2671 #2692",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2.1/PiliPlus_ios_2.1.2%2B5255.ipa",
+          "size": 23937413,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.2",
+          "buildVersion": "5241",
+          "date": "2026-08-24",
+          "localizedDescription": "支持设置蜂窝网络解码格式 #2571 by @ucxn\r\n合并字体设置 #2611 by @My-Responsitories\r\n增加楼中楼评论排序设置 #2655 by @Meteor-3\r\nmacOS Command+R 刷新推荐 #2537 by @xiejiaxue\r\nAndroid、Windows、Linux 支持从已安装字体中选择字体 #2611 by @My-Responsitories\r\n\r\n修复部分安卓无法播放 #2631 #2642\r\n修复账号退出逻辑 #2666 by @KIDA-MNESIA\r\n修复导入设置 WebDav 配置未更新 #2667 by @KIDA-MNESIA",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2/PiliPlus_ios_2.1.2%2B5241.ipa",
+          "size": 23940004,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.1",
+          "buildVersion": "5231",
+          "date": "2026-08-22",
+          "localizedDescription": "自定义定时关闭时长改为滑动选择 #2632\r\n\r\n修复 #2631 #2636\r\n修复 #1967 #2634 by @My-Responsitories\r\n修复复制 VideoTrack 信息 #2633 by @My-Responsitories",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.1.2/PiliPlus_ios_2.1.1%2B5231.ipa",
+          "size": 23906848,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.1",
+          "buildVersion": "5230",
+          "date": "2026-08-22",
+          "localizedDescription": "自定义定时关闭时长改为滑动选择 #2632\r\n\r\n修复 #2631 #2636\r\n修复 #1967 #2634 by @My-Responsitories\r\n修复复制 VideoTrack 信息 #2633 by @My-Responsitories",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.1.1/PiliPlus_ios_2.1.1%2B5230.ipa",
+          "size": 23909162,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.1",
+          "buildVersion": "5225",
+          "date": "2026-08-22",
+          "localizedDescription": "支持显示 SC 发送时间\r\n私信消息支持标为已读\r\n过滤无播放权限的推荐视频\r\n取消滑动刷新时不隐藏 FAB\r\n动态文字支持复制表情包内容\r\n刷新滑动距离调整为根据刷新指示器高度计算\r\n恢复历史记录视频播放记录 #2458 by @Zxis233\r\n直播卡片支持反馈 #2456 by @My-Responsitories\r\nLinux 平台关闭 Impeller #2569 by @Axiaobo7788\r\n增加弹幕不透明度/字体大小设置区间 #2452 by @Meteor-3\r\n文字选择工具栏部分支持站内搜索 #2474 by @My-Responsitories\r\n支持播放多片段类型视频，优化仅播音频 #2455 by @My-Responsitories\r\n其他调整 #2612 by @My-Responsitories\r\n\r\n界面优化\r\n优化统一 iOS 列表滑动效果 #2184\r\n优化评论/动态检查结果界面 #2501\r\n图片缓存优化 #2473 by @My-Responsitories\r\n\r\n修复桌面端富文本菜单点击无效\r\n修复 #2182 #2485 #2491 #2494 #2581\r\n修复应用内 WebView #2454 by @Starfallan\r\n修复 iPadOS 窗口模式控制按钮 #2482 by @ngbyspy\r\n修复 Start History 链接 #2557 by @Dessalines39394\r\n修复 macOS 标题栏 #2448 by @Lynricsy, #2534 by @xiejiaxue\r\n修复 bug\r\n\r\n其他调整",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.1/PiliPlus_ios_2.1.1%2B5225.ipa",
+          "size": 23884938,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.1.0",
+          "buildVersion": "5109",
+          "date": "2026-07-12",
+          "localizedDescription": "支持评论区投票\r\n支持显示话题折叠内容\r\n支持显示动态`赞与转发`详情\r\n动态支持点击评论按钮直达评论区\r\n专栏支持跨行复制 #2437 by @My-Responsitories\r\n视频字幕支持未登录使用 #2426 by @My-Responsitories\r\n支持导出 `vtt`、`srt` 格式字幕 co-by @My-Responsitories\r\n解码格式设置改为多选 #2426 by @My-Responsitories #2444 co-by @Starfallan\r\n其他调整 #2426 by @My-Responsitories\r\n\r\n界面优化\r\n调整默认滑动弹簧系数\r\n安卓硬解优先使用 `mediacodec` \r\nLinux 构建优化 #2441 by @VillagerTom\r\n\r\n修复桌面端富文本选中编辑\r\n修复 bug\r\n\r\n其他调整",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.0/PiliPlus_ios_2.1.0%2B5109.ipa",
+          "size": 23440601,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.0.9",
+          "buildVersion": "5051",
+          "date": "2026-06-13",
+          "localizedDescription": "修复 bug\r\n其他调整 #2404 by @My-Responsitories",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.9.2/PiliPlus_ios_2.0.9%2B5051.ipa",
+          "size": 23393835,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.0.9",
+          "buildVersion": "5047",
+          "date": "2026-06-12",
+          "localizedDescription": "直播支持切换线路\r\n桌面端支持自定义最大音量 #2199\r\n移动端支持设置播放器音量 #2358\r\n优化视频字幕、截图 #2364 by @My-Responsitories\r\n音乐页面显示全部标签 #2363 by @My-Responsitories\r\n支持自定义播放缓存大小、缓存时长 #2370 by @My-Responsitories\r\n\r\n修复 #2342 #2350 #2351 #2386\r\n修复桌面端富文本输入 #2123 #2215 #2300\r\n修复安卓端验证码窗口显示 #2341 by @My-Responsitories",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.9.1/PiliPlus_ios_2.0.9%2B5047.ipa",
+          "size": 23386570,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.0.9",
+          "buildVersion": "5046",
+          "date": "2026-06-12",
+          "localizedDescription": "直播支持切换线路\r\n桌面端支持自定义最大音量 #2199\r\n移动端支持设置播放器音量 #2358\r\n优化视频字幕、截图 #2364 by @My-Responsitories\r\n音乐页面显示全部标签 #2363 by @My-Responsitories\r\n支持自定义播放缓存大小、缓存时长 #2370 by @My-Responsitories\r\n\r\n修复 #2342 #2350 #2351 #2386\r\n修复桌面端富文本输入 #2123 #2215 #2300\r\n修复安卓端验证码窗口显示 #2341 by @My-Responsitories",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.9/PiliPlus_ios_2.0.9%2B5046.ipa",
+          "size": 23388750,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.0.8",
+          "buildVersion": "5024",
+          "date": "2026-06-06",
+          "localizedDescription": "增加私信消息点击范围 #2292\r\n\r\n修复专栏解析\r\n修复 #2295 #2308\r\n修复界面缩放时无法显示滚动弹幕 #2305",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.8.1/PiliPlus_ios_2.0.8%2B5024.ipa",
+          "size": 23460325,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.0.8",
+          "buildVersion": "5014",
+          "date": "2026-06-04",
+          "localizedDescription": "更多 FAB 动画 #2265\r\n优化专栏视频跳转 #2148\r\n发布页发布按钮防抖 #2152\r\n限制视频弹出面板宽度 #2277\r\n锁定模式不处理分段跳转 #2143\r\n安卓画中画添加快进/快退按钮 #2251\r\n桌面端`可选文本`调整为横向触发 #2106\r\n安卓关闭系统动画时支持播放 GIF #2107\r\n安卓支持调节倾斜角度切换视频方向 #2140\r\n重构 Log #2216 by @My-Responsitories\r\n优化账号描述 #2280 by @My-Responsitories\r\njni 重构 #2244 #2255 by @My-Responsitories\r\n优化 win32 api #2246 by @My-Responsitories\r\n移除未用的图片资源 #2267 by @My-Responsitories\r\n重构缓存管理 #2266 #2276 by @My-Responsitories\r\n处理投票 URL Scheme #2105 by @My-Responsitories\r\n\r\n修复超分失效 #2112\r\n修复投币上限 #2192\r\n修复手势调节系统亮度幅度不一致 #2134\r\n修复 #2196 #2208 #2209 #2226 #2233 #2239 #2249\r\n修复部分设备无法播放 #2117 by @My-Responsitories",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.8/PiliPlus_ios_2.0.8%2B5014.ipa",
+          "size": 23458920,
+          "minOSVersion": "14.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "PiliPlus 2.1.6.2",
+      "identifier": "pili-2.1.6.2",
+      "caption": "2.1.6.2",
+      "date": "2026-10-10",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6.2"
+    },
+    {
+      "title": "PiliPlus 2.1.6.1",
+      "identifier": "pili-2.1.6.1",
+      "caption": "2.1.6.1",
+      "date": "2026-10-10",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6.1"
+    },
+    {
+      "title": "PiliPlus 2.1.6",
+      "identifier": "pili-2.1.6",
+      "caption": "2.1.6",
+      "date": "2026-10-05",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6"
+    },
+    {
+      "title": "PiliPlus 2.1.5",
+      "identifier": "pili-2.1.5",
+      "caption": "2.1.5",
+      "date": "2026-09-25",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.5"
+    },
+    {
+      "title": "PiliPlus 2.1.4",
+      "identifier": "pili-2.1.4",
+      "caption": "2.1.4",
+      "date": "2026-09-13",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.4"
+    },
+    {
+      "title": "PiliPlus 2.1.3.1",
+      "identifier": "pili-2.1.3.1",
+      "caption": "2.1.3.1",
+      "date": "2026-09-05",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.3.1"
+    },
+    {
+      "title": "PiliPlus 2.1.3",
+      "identifier": "pili-2.1.3",
+      "caption": "2.1.3",
+      "date": "2026-09-05",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.3"
+    },
+    {
+      "title": "PiliPlus 2.1.2.3",
+      "identifier": "pili-2.1.2.3",
+      "caption": "2.1.2.3",
+      "date": "2026-08-30",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.3"
+    },
+    {
+      "title": "PiliPlus 2.1.2.2",
+      "identifier": "pili-2.1.2.2",
+      "caption": "2.1.2.2",
+      "date": "2026-08-29",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.2"
+    },
+    {
+      "title": "PiliPlus 2.1.2.1",
+      "identifier": "pili-2.1.2.1",
+      "caption": "2.1.2.1",
+      "date": "2026-08-26",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.1"
+    },
+    {
+      "title": "PiliPlus 2.1.2",
+      "identifier": "pili-2.1.2",
+      "caption": "2.1.2",
+      "date": "2026-08-24",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2"
+    },
+    {
+      "title": "PiliPlus 2.1.1.2",
+      "identifier": "pili-2.1.1.2",
+      "caption": "2.1.1.2",
+      "date": "2026-08-22",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.1.2"
+    },
+    {
+      "title": "PiliPlus 2.1.1.1",
+      "identifier": "pili-2.1.1.1",
+      "caption": "2.1.1.1",
+      "date": "2026-08-22",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.1.1"
+    },
+    {
+      "title": "PiliPlus 2.1.1",
+      "identifier": "pili-2.1.1",
+      "caption": "2.1.1",
+      "date": "2026-08-22",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.1"
+    },
+    {
+      "title": "PiliPlus 2.1.0",
+      "identifier": "pili-2.1.0",
+      "caption": "2.1.0",
+      "date": "2026-07-12",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.0"
+    },
+    {
+      "title": "PiliPlus 2.0.9.2",
+      "identifier": "pili-2.0.9.2",
+      "caption": "2.0.9.2",
+      "date": "2026-06-13",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.9.2"
+    },
+    {
+      "title": "PiliPlus 2.0.9.1",
+      "identifier": "pili-2.0.9.1",
+      "caption": "2.0.9.1",
+      "date": "2026-06-12",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.9.1"
+    },
+    {
+      "title": "PiliPlus 2.0.9",
+      "identifier": "pili-2.0.9",
+      "caption": "2.0.9",
+      "date": "2026-06-12",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.9"
+    },
+    {
+      "title": "PiliPlus 2.0.8.1",
+      "identifier": "pili-2.0.8.1",
+      "caption": "2.0.8.1",
+      "date": "2026-06-06",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.8.1"
+    },
+    {
+      "title": "PiliPlus 2.0.8",
+      "identifier": "pili-2.0.8",
+      "caption": "2.0.8",
+      "date": "2026-06-04",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.8"
+    }
+  ]
+}
