@@ -206,7 +206,7 @@
       "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
       "developerName": "huamurui",
       "localizedDescription": "轻量、无广告的第三方知乎客户端，支持浏览、搜索、收藏和创作。",
-      "iconURL": "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png",
+      "iconURL": "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/src/assets/images/icon.png",
       "category": "social",
       "versions": [
         {
@@ -236,7 +236,7 @@
       "developerName": "infinityf4p",
       "subtitle": "第三方百度贴吧客户端",
       "localizedDescription": "原生 SwiftUI 构建的非官方贴吧客户端，支持浏览、搜索、收藏、媒体查看与本地阅读记录（国内镜像加速版）。",
-      "iconURL": "https://cdn.jsdelivr.net/gh/infinityf4p/TiebaPure-iOS@main/TiebaPure/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png",
+      "iconURL": "https://cdn.jsdelivr.net/gh/bebound/AltGallery@master/apps/TiebaPure/icon.png",
       "tintColor": "#4E6EF2",
       "category": "social",
       "versions": [

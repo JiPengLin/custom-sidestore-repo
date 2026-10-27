@@ -2,14 +2,14 @@
   "name": "知乎-- (国内镜像源)",
   "identifier": "com.huamu013.ZhihuMinusMinus.source",
   "subtitle": "轻量、无广告的第三方知乎客户端",
-  "iconURL": "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png",
+  "iconURL": "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/src/assets/images/icon.png",
   "apps": [
     {
       "name": "知乎--",
       "bundleIdentifier": "com.huamu013.ZhihuMinusMinus",
       "developerName": "huamurui",
       "localizedDescription": "轻量、无广告的第三方知乎客户端，支持浏览、搜索、收藏和创作。",
-      "iconURL": "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png",
+      "iconURL": "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/src/assets/images/icon.png",
       "category": "social",
       "versions": [
         {
