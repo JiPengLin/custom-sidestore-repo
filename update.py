@@ -24,9 +24,9 @@ PILI_SCREENSHOTS = [
     f"{PILI_CDN}/assets/screenshots/850shots_so.png"
 ]
 
-# 2. TiebaPure 贴吧配置
+# 2. TiebaPure 贴吧配置（使用提取自官方 IPA 的原生高清图标）
 TIEBA_BUNDLE_ID = "com.infinityf4p.TiebaPure"
-TIEBA_ICON = "https://cdn.jsdelivr.net/gh/infinityf4p/TiebaPure-iOS@main/TiebaPure/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png"
+TIEBA_ICON = "https://cdn.jsdelivr.net/gh/bebound/AltGallery@master/apps/TiebaPure/icon.png"
 # ===============================================
 
 def extract_pili_version_and_build(filename: str, fallback_tag: str):
@@ -101,7 +101,8 @@ def build_zhihu_app():
     source_json = http_get_json(ZHIHU_SOURCE_URL)
     zhihu_app = source_json["apps"][0]
 
-    zhihu_app["iconURL"] = "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/assets/images/icon.png"
+    # 修正路径：补全 src/
+    zhihu_app["iconURL"] = "https://cdn.jsdelivr.net/gh/huamurui/zhihu-minus-minus@main/src/assets/images/icon.png"
     zhihu_app["subtitle"] = "轻量、无广告的第三方知乎客户端"
 
     for v in zhihu_app.get("versions", []):
@@ -185,7 +186,7 @@ def main():
     print("正在拉取 TiebaPure...")
     tieba_app, tieba_news = build_tiebapure_app()
 
-    # 1. 生成聚合源 apps.json (包含三款应用)
+    # 1. 生成聚合源 apps.json
     combined_source = {
         "name": SOURCE_NAME,
         "identifier": SOURCE_IDENTIFIER,
