@@ -21,6 +21,15 @@
       "versions": [
         {
           "version": "2.2.0",
+          "buildVersion": "5598",
+          "date": "2026-11-03",
+          "localizedDescription": "更新投屏依赖 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/2680#issuecomment-6597938908\r\n修复部分视频评论显示不全 #3458\r\n修复播放课堂视频 #3454 by @ucxn\r\n修复 macOS 关闭系统标题栏后无法拖动 #3453 by @NalCol\r\n修复点赞弹幕跳转未留提前量，导致跳转到弹幕时无法加载 #3459 by @Rim-World\r\nChromeOS(ARC) 上不再主动请求屏幕方向，由系统决定窗口方向 #3406 co-by @selcarpa",
+          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0.2/PiliPlus_ios_2.2.0%2B5598.ipa",
+          "size": 24933082,
+          "minOSVersion": "14.0"
+        },
+        {
+          "version": "2.2.0",
           "buildVersion": "5590",
           "date": "2026-11-02",
           "localizedDescription": "修复 bug\r\n修复无法播放 drm 番剧 #3449\r\n修复匿名账号搜索被风控 #3411\r\n修复安卓(vivo)音量调节 #3442 by @numb747\r\n修复 Linux MPRIS 未设置 DesktopEntry 与 Identity #3438 by @Infinifar",
@@ -188,15 +197,6 @@
           "localizedDescription": "直播支持切换线路\r\n桌面端支持自定义最大音量 #2199\r\n移动端支持设置播放器音量 #2358\r\n优化视频字幕、截图 #2364 by @My-Responsitories\r\n音乐页面显示全部标签 #2363 by @My-Responsitories\r\n支持自定义播放缓存大小、缓存时长 #2370 by @My-Responsitories\r\n\r\n修复 #2342 #2350 #2351 #2386\r\n修复桌面端富文本输入 #2123 #2215 #2300\r\n修复安卓端验证码窗口显示 #2341 by @My-Responsitories",
           "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.9.1/PiliPlus_ios_2.0.9%2B5047.ipa",
           "size": 23386570,
-          "minOSVersion": "14.0"
-        },
-        {
-          "version": "2.0.9",
-          "buildVersion": "5046",
-          "date": "2026-06-12",
-          "localizedDescription": "直播支持切换线路\r\n桌面端支持自定义最大音量 #2199\r\n移动端支持设置播放器音量 #2358\r\n优化视频字幕、截图 #2364 by @My-Responsitories\r\n音乐页面显示全部标签 #2363 by @My-Responsitories\r\n支持自定义播放缓存大小、缓存时长 #2370 by @My-Responsitories\r\n\r\n修复 #2342 #2350 #2351 #2386\r\n修复桌面端富文本输入 #2123 #2215 #2300\r\n修复安卓端验证码窗口显示 #2341 by @My-Responsitories",
-          "downloadURL": "https://gh-proxy.com/https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.0.9/PiliPlus_ios_2.0.9%2B5046.ipa",
-          "size": 23388750,
           "minOSVersion": "14.0"
         }
       ]
@@ -379,6 +379,16 @@
     }
   ],
   "news": [
+    {
+      "title": "PiliPlus 2.2.0.2",
+      "identifier": "pili-2.2.0.2",
+      "caption": "2.2.0.2",
+      "date": "2026-11-03",
+      "tintColor": "#00AEEF",
+      "notify": true,
+      "appID": "com.example.piliplus",
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.0.2"
+    },
     {
       "title": "PiliPlus 2.2.0.1",
       "identifier": "pili-2.2.0.1",
@@ -728,16 +738,6 @@
       "notify": true,
       "appID": "com.example.piliplus",
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.9.1"
-    },
-    {
-      "title": "PiliPlus 2.0.9",
-      "identifier": "pili-2.0.9",
-      "caption": "2.0.9",
-      "date": "2026-06-12",
-      "tintColor": "#00AEEF",
-      "notify": true,
-      "appID": "com.example.piliplus",
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.0.9"
     }
   ]
 }
