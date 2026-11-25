@@ -13,11 +13,11 @@
       "category": "social",
       "versions": [
         {
-          "version": "0.10.0",
+          "version": "0.10.1",
           "buildVersion": "1",
-          "date": "2026-11-21",
-          "downloadURL": "https://gh-proxy.com/https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.10.0/zhihu-minus-minus-v0.10.0-unsigned.ipa",
-          "size": 14901422,
+          "date": "2026-11-25",
+          "downloadURL": "https://gh-proxy.com/https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.10.1/zhihu-minus-minus-v0.10.1-unsigned.ipa",
+          "size": 14916202,
           "minOSVersion": "16.4"
         }
       ],
@@ -36,10 +36,10 @@
   ],
   "news": [
     {
-      "title": "知乎-- 0.10.0",
-      "identifier": "zhihu-0.10.0",
-      "caption": "Version 0.10.0 发布",
-      "date": "2026-11-21",
+      "title": "知乎-- 0.10.1",
+      "identifier": "zhihu-0.10.1",
+      "caption": "Version 0.10.1 发布",
+      "date": "2026-11-25",
       "tintColor": "#0066FF",
       "notify": true,
       "appID": "com.huamurui.ZhihuMinusMinus",

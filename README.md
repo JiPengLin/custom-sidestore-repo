@@ -13,7 +13,7 @@
 | 应用名称 | 官方上游项目 | 真实包名 (Bundle ID) | 最低系统 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
 | **PiliPlus** | [bggRGjQaUbCoE/PiliPlus](https://github.com/bggRGjQaUbCoE/PiliPlus) | `com.example.piliplus` | iOS 14.0+ | 第三方轻量 Bilibili 客户端 |
-| **知乎--** | [huamurui/zhihu-minus-minus](https://github.com/huamurui/zhihu-minus-minus) | `com.huamu013.ZhihuMinusMinus` | iOS 15.1+ | 轻量、无广告的第三方知乎客户端 |
+| **知乎--** | [huamurui/zhihu-minus-minus](https://github.com/huamurui/zhihu-minus-minus) | `com.huamurui.ZhihuMinusMinus` | iOS 16.4+ | 轻量、无广告的第三方知乎客户端 |
 | **TiebaPure** | [infinityf4p/TiebaPure-iOS](https://github.com/infinityf4p/TiebaPure-iOS) | `com.infinityf4p.TiebaPure` | iOS 16.4+ | 原生 SwiftUI 编写的纯净百度贴吧客户端 |
 
 ---

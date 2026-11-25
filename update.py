@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import os
 import re
 import json
@@ -30,12 +32,16 @@ TIEBA_ICON = "https://cdn.jsdelivr.net/gh/bebound/AltGallery@master/apps/TiebaPu
 # ===============================================
 
 def extract_pili_version_and_build(filename: str, fallback_tag: str):
-    match = re.search(r"PiliPlus_ios_([^+]+)\+(\d+)\.ipa$", filename, re.IGNORECASE)
-    if match:
-        return match.group(1), match.group(2)
     build_match = re.search(r"\+(\d+)\.ipa$", filename, re.IGNORECASE)
     build_ver = build_match.group(1) if build_match else "1"
     clean_tag = fallback_tag.lstrip("v")
+    # 优先使用 Release tag（如 2.2.0.2），避免 PiliPlus 四位小版本更新时
+    # IPA 文件名仍为 2.2.0 导致 SideStore 忽略 buildVersion 而只显示 OPEN
+    if re.match(r"^\d+(\.\d+)+$", clean_tag):
+        return clean_tag, build_ver
+    match = re.search(r"PiliPlus_ios_([^+]+)\+(\d+)\.ipa$", filename, re.IGNORECASE)
+    if match:
+        return match.group(1), match.group(2)
     return clean_tag, build_ver
 
 def parse_semver(ver_str: str) -> list[int]:
